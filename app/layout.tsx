@@ -41,6 +41,14 @@ export const metadata: Metadata = {
 			'Passionate full-stack developer creating complete web solutions. Explore my projects and technical expertise across the entire development stack.',
 		url: 'https://ahmedmagdy-portfolio.netlify.app',
 		siteName: 'Ahmed Magdy - Portfolio',
+		images: [
+			{
+				url: 'https://ahmedmagdy-portfolio.netlify.app/opengraph-image.png',
+				width: 1200,
+				height: 630,
+				alt: 'Ahmed Magdy - Full-Stack Developer Portfolio',
+			},
+		],
 		locale: 'en_US',
 		type: 'website',
 	},

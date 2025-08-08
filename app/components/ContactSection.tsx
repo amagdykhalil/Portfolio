@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function ContactSection() {
 	return (
-		<section className="py-20 px-4">
+		<section id='contact' className="py-20 px-4">
 			<div className="max-w-4xl mx-auto text-center">
 				<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
 					<h2 className="text-3xl font-bold text-gray-900">Let&apos;s Build Something Amazing</h2>
@@ -28,19 +28,19 @@ export default function ContactSection() {
 
 					{/* Contact Info */}
 					<div className="flex items-center justify-center gap-4 text-gray-600 mt-4">
-					  <div className="flex items-center gap-2">
-					    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-					      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-					      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-					    </svg>
-					    <span>ahmed.magdy.dev9@gmail.com</span>
-					  </div>
-					  <div className="flex items-center gap-2">
-					    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h2l3.6 7.59-1.35 2.44A1 1 0 008 17h11v-2H9.42a1 1 0 01-.95-.68l-.38-1.14h7.91a1 1 0 00.95-.68l1.58-4.74A1 1 0 0017 7H6.21l-.94-2H3z" />
-					    </svg>
-					    <span>+20 114 842 5889</span>
-					  </div>
+						<div className="flex items-center gap-2">
+							<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+								<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+							</svg>
+							<span>ahmed.magdy.dev9@gmail.com</span>
+						</div>
+						<div className="flex items-center gap-2">
+							<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h2l3.6 7.59-1.35 2.44A1 1 0 008 17h11v-2H9.42a1 1 0 01-.95-.68l-.38-1.14h7.91a1 1 0 00.95-.68l1.58-4.74A1 1 0 0017 7H6.21l-.94-2H3z" />
+							</svg>
+							<span>+20 114 842 5889</span>
+						</div>
 					</div>
 
 
@@ -48,7 +48,7 @@ export default function ContactSection() {
 					<div className="flex flex-col sm:flex-row justify-center gap-4">
 						<a
 							href="mailto:ahmed.magdy.dev9@gmail.com"
-							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							className="px-8 py-3 bg-blue-600  text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
 						>
 							<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
 								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
