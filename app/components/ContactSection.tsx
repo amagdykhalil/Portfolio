@@ -6,7 +6,7 @@ export default function ContactSection() {
 	return (
 		<section id='contact' className="py-20 px-4">
 			<div className="max-w-4xl mx-auto text-center">
-				<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
+				<div data-aos="fade-up" className="space-y-8">
 					<h2 className="text-3xl font-bold text-gray-900">Let&apos;s Build Something Amazing</h2>
 					<p className="text-gray-600 max-w-2xl mx-auto">
 						Looking for a full-stack developer who can architect and implement complete solutions? Let&apos;s discuss your project.
@@ -96,7 +96,7 @@ export default function ContactSection() {
 							</svg>
 						</a>
 					</div>
-				</motion.div>
+				</div>
 			</div>
 		</section>
 	);

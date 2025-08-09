@@ -9,8 +9,9 @@ export default function ProjectsSection() {
 	const projects: ProjectCardProps[] = [
 		{
 			title: 'Addiction Rehabilitation Center Management System',
-			isOngoing: true,
 			description: 'End-to-end platform for managing inpatient and outpatient care in rehab centers—covering dynamic intake forms, treatment workflows, therapist tracking, and discharge planning.',
+			isOngoing: true,
+			imagePath: "rms.png",
 			backend: [
 				'ASP.NET Web API with Clean Architecture',
 				'Identity management using ASP Identity & JWT',
@@ -34,8 +35,9 @@ export default function ProjectsSection() {
 		},
 		{
 			title: 'E-commerce Platform',
-			isOngoing: false,
 			description: 'Sleek full-stack shopping solution with user authentication, advanced product filtering, cart management, and detailed order history—crafted for a seamless online experience.',
+			isOngoing: false,
+			imagePath: "ecommerce.png",
 			backend: [
 				'ASP.NET Web API with Clean Architecture',
 				'CQRS & Mediator Pattern',
@@ -59,8 +61,9 @@ export default function ProjectsSection() {
 		},
 		{
 			title: 'Driving License Management System',
-			isOngoing: false,
 			description: 'Centralized platform for managing license applications, tests, renewals, and international licenses—streamlining all aspects of vehicle licensing and registration.',
+			isOngoing: false,
+			imagePath: "dvld.png",
 			backend: [
 				'ASP.NET Web API with Clean Architecture',
 				'SQL Server accessed via ADO.NET',
@@ -117,7 +120,7 @@ export default function ProjectsSection() {
 					</button>
 				</div>
 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+				<div className="flex flex-col gap-8 ">
 					{filteredProjects.map((project, index) => (
 						<Project key={index} {...project} />
 					))}

@@ -16,10 +16,8 @@ export default function ExperienceSection() {
                 </motion.h2>
 
                 <div className="space-y-6">
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                    <div
+                        data-aos="flip-left"
                         className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm"
                     >
                         <h3 className="text-lg font-semibold text-gray-800 mb-1">
@@ -31,7 +29,7 @@ export default function ExperienceSection() {
                         <p className="text-sm text-gray-700">
                             Contributing to full-stack development using .Net and modern web technologies.
                         </p>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

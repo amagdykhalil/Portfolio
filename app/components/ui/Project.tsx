@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 
 type LinkType = 'video' | 'frontend' | 'backend' | 'github' | 'demo';
@@ -17,6 +17,7 @@ export interface ProjectCardProps {
     title: string;
     description: string;
     isOngoing: boolean,
+    imagePath: string,
     backend: string[];
     frontend: string[];
     links: ProjectLink[];
@@ -65,18 +66,21 @@ export default function Project({
     title,
     description,
     isOngoing = true,
+    imagePath,
     backend,
     frontend,
     links,
     className,
 }: ProjectCardProps) {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className={clsx(
-                'bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg h-full flex flex-col',
+                'bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg h-full grid grid-cols-1 lg:grid-cols-2',
                 className
             )}
         >
@@ -142,6 +146,37 @@ export default function Project({
                 </div>
 
             </div>
+            <div
+                onClick={() => setIsModalOpen(true)}
+                className="cursor-pointer overflow-hidden rounded-r-xl lg:rounded-xl"
+            >
+                <img
+                    src={imagePath}
+                    alt={title}
+                    className="w-full h-full object-cover"
+                />
+            </div>
+
+            {isModalOpen && (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center"
+                    onClick={() => setIsModalOpen(false)} // click outside to close
+                >
+                    <motion.img
+                        src={imagePath}
+                        alt={title}
+                        initial={{ scale: 0.8 }}
+                        animate={{ scale: 1 }}
+                        exit={{ scale: 0.8 }}
+                        className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-lg"
+                        onClick={(e) => e.stopPropagation()} // prevent bubbling
+                    />
+                </motion.div>
+            )}
+
         </motion.div >
     );
 }

@@ -16,10 +16,8 @@ export default function CertificationsSection() {
                 </motion.h2>
 
                 <div className="space-y-6">
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                    <div
+                        data-aos="flip-left"
                         className="bg-gray-100 border border-gray-200 rounded-xl p-6 shadow-sm"
                     >
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
@@ -36,9 +34,10 @@ export default function CertificationsSection() {
                         >
                             View Certificate →
                         </a>
-                    </motion.div>
+                    </div>
+
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
