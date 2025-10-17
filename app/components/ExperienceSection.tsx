@@ -56,16 +56,14 @@ export default function ExperienceSection() {
                             </span>
                         </p>
                         <p className="text-sm text-gray-700">
-                            Delivered full-stack web solutions for multiple clients using ASP.NET Core,
-                            React, and Next.js — focusing on performance, scalability, and client satisfaction.
-                            Translate business needs into functional systems, optimize application performance, and ensure timely delivery.
+                            Delivered full-stack web solutions for 𝐦𝐮𝐥𝐭𝐢𝐩𝐥𝐞 𝐜𝐥𝐢𝐞𝐧𝐭𝐬 using 𝐀𝐒𝐏.𝐍𝐄𝐓 𝐂𝐨𝐫𝐞, 𝐑𝐞𝐚𝐜𝐭, 𝐚𝐧𝐝 𝐍𝐞𝐱𝐭.𝐣𝐬 — focusing on performance, scalability, and client satisfaction. Translate business needs into functional systems, optimize application performance, and ensure timely delivery.
                         </p>
                         <ul className="list-disc list-inside mt-3 text-sm text-gray-700 space-y-1">
-                            <li>Improved website performance and reduced lag through efficient code optimization and visualization tools.</li>
-                            <li>Designed database structures to enhance scalability and data integrity.</li>
+                            <li>Improved 𝐰𝐞𝐛𝐬𝐢𝐭𝐞 𝐩𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞 𝐚𝐧𝐝 𝐫𝐞𝐝𝐮𝐜𝐞𝐝 𝐥𝐚𝐠 through efficient code optimization and visualization tools.</li>
+                            <li>Designed 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞 𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞𝐬 to enhance scalability and data integrity.</li>
                             <li>Handled deployments with Azure and Docker.</li>
                             <li>Built scalable web platforms for real estate, licensing, and healthcare sectors.</li>
-                            <li>Quickly adapted to new technologies — fixed bugs in a Laravel-based system despite no prior experience in this technology.</li>
+                            <li>Quickly adapted to new technologies — 𝐟𝐢𝐱𝐞𝐝 𝐛𝐮𝐠𝐬 in a Laravel-based system despite no prior experience in this technology.</li>
                             <li>Collaborated effectively within 𝐜𝐫𝐨𝐬𝐬-𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐚𝐥 𝐭𝐞𝐚𝐦𝐬 using agile methodologies and Jira for project tracking.</li>
                         </ul>
                     </div>
