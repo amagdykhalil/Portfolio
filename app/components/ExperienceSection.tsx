@@ -64,8 +64,9 @@ export default function ExperienceSection() {
                             <li>Improved website performance and reduced lag through efficient code optimization and visualization tools.</li>
                             <li>Designed database structures to enhance scalability and data integrity.</li>
                             <li>Handled deployments with Azure and Docker.</li>
-                            <li>builded scalable web platforms for real estate, licensing, and healthcare sectors.</li>
+                            <li>Built scalable web platforms for real estate, licensing, and healthcare sectors.</li>
                             <li>Quickly adapted to new technologies — fixed bugs in a Laravel-based system despite no prior experience in this technology.</li>
+                            <li>Collaborated effectively within 𝐜𝐫𝐨𝐬𝐬-𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐚𝐥 𝐭𝐞𝐚𝐦𝐬 using agile methodologies and Jira for project tracking.</li>
                         </ul>
                     </div>
                 </div>
