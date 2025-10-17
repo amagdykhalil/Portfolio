@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import React, { useState } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 
 type LinkType = 'video' | 'frontend' | 'backend' | 'github' | 'demo';
@@ -16,11 +16,12 @@ interface ProjectLink {
 export interface ProjectCardProps {
     title: string;
     description: string;
-    isOngoing: boolean,
+    type: 'freelance' | 'personal',
     imagePath: string,
-    backend: string[];
-    frontend: string[];
+    backend?: string[];
+    frontend?: string[];
     links: ProjectLink[];
+    done?: string[];
     className?: string;       // optional extra classes
 }
 
@@ -65,14 +66,13 @@ const defaultColors: Record<LinkType, string> = {
 export default function Project({
     title,
     description,
-    isOngoing = true,
-    imagePath,
     backend,
     frontend,
     links,
+    done,
     className,
 }: ProjectCardProps) {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+
 
     return (
         <motion.div
@@ -80,35 +80,43 @@ export default function Project({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className={clsx(
-                'bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg h-full grid grid-cols-1 lg:grid-cols-2',
+                'bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg h-full grid grid-cols-1 ',
                 className
             )}
         >
-            <div className="p-8 flex-1 flex flex-col gap-6">
+            <div className="p-8 flex-1 flex flex-col gap-5">
 
                 <div>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900">{title} {isOngoing ? " (Ongoing)" : ""}</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">{title}</h3>
                     <p className="text-gray-600">{description}</p>
                 </div>
 
+                {done && done.length > 0 && (
+                    <div className="flex flex-col gap-2 list-disc list-inside text-sm text-gray-700">
+                        {done.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                    </div>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
+                    {(backend?.length ?? 0) > 0 && <div>
                         <h4 className="text-sm font-semibold text-purple-600 mb-3">Backend Architecture</h4>
                         <ul className="list-disc list-inside space-y-2 text-sm text-gray-600">
-                            {backend.map((item, i) => (
+                            {backend?.map((item, i) => (
                                 <li key={i}>{item}</li>
                             ))}
                         </ul>
-                    </div>
+                    </div>}
 
-                    <div>
+                    {(frontend?.length ?? 0) > 0 && <div>
                         <h4 className="text-sm font-semibold text-blue-600 mb-3">Frontend Highlights</h4>
                         <ul className="list-disc list-inside space-y-2 text-sm text-gray-600">
-                            {frontend.map((item, i) => (
+                            {frontend?.map((item, i) => (
                                 <li key={i}>{item}</li>
                             ))}
                         </ul>
-                    </div>
+                    </div>}
                 </div>
 
                 <div className="mt-auto grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
@@ -146,36 +154,6 @@ export default function Project({
                 </div>
 
             </div>
-            <div
-                onClick={() => setIsModalOpen(true)}
-                className="cursor-pointer overflow-hidden rounded-r-xl lg:rounded-xl"
-            >
-                <img
-                    src={imagePath}
-                    alt={title}
-                    className="w-full h-full object-cover"
-                />
-            </div>
-
-            {isModalOpen && (
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center"
-                    onClick={() => setIsModalOpen(false)} // click outside to close
-                >
-                    <motion.img
-                        src={imagePath}
-                        alt={title}
-                        initial={{ scale: 0.8 }}
-                        animate={{ scale: 1 }}
-                        exit={{ scale: 0.8 }}
-                        className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-lg"
-                        onClick={(e) => e.stopPropagation()} // prevent bubbling
-                    />
-                </motion.div>
-            )}
 
         </motion.div >
     );

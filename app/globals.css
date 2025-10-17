@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    .container {
+        margin-inline: auto;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+}
+
+@layer components {
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
